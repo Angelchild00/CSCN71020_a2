@@ -56,7 +56,7 @@ namespace BCSRecUnitTest
 			int input = 100;
 			int expected = 5;
 			setLength(input, &length);
-			int actual = input;
+			int actual = length;
 			Assert::AreEqual(expected, actual);
 		} // testing upper limit
 		TEST_METHOD(Test_Setwidth1)

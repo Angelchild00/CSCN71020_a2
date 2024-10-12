@@ -2,7 +2,7 @@
 #include "CppUnitTest.h"
 
 extern "C" int getPerimeter(int* length, int* width);
-
+extern "C" int getArea(int* length, int* width); 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace BCSRecUnitTest
@@ -20,6 +20,16 @@ namespace BCSRecUnitTest
 			Assert::AreEqual(4736828, Result);
 		}
 		// Variables can be replaced for other tests
+		TEST_METHOD(TestArea1)
+		{
+			int Result;
+			int x = 25300;
+			int y = 32562;
+			Result = getArea(&x, &y);
+			Assert::AreEqual(823818600, Result);
+		}
+		// Variables can be replaced for other tests
+
 
 	};
 }

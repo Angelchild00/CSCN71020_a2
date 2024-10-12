@@ -3,6 +3,7 @@
 
 extern "C" int getPerimeter(int* length, int* width);
 extern "C" int getArea(int* length, int* width); 
+extern "C" void setLength(int input, int* length);
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace BCSRecUnitTest
@@ -29,6 +30,34 @@ namespace BCSRecUnitTest
 			Assert::AreEqual(823818600, Result);
 		}
 		// Variables can be replaced for other tests
+
+		TEST_METHOD(Test_SetLength1)
+		{
+			int length = 5;
+			int input = 6;
+			int expected = 6;
+			setLength(input, &length);
+			int actual = input;
+			Assert::AreNotEqual(expected, actual);
+		}
+		TEST_METHOD(Test_SetLength2)
+		{
+			int length = 5;
+			int input = 0;
+			int expected = 5;
+			setLength(input, &length);
+			int actual = input;
+			Assert::AreNotEqual(expected, actual);
+		}
+		TEST_METHOD(Test_SetLength3)
+		{
+			int length = 5;
+			int input = 100;
+			int expected = 5;
+			setLength(input, &length);
+			int actual = input;
+			Assert::AreNotEqual(expected, actual);
+		}
 
 
 	};

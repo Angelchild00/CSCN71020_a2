@@ -39,17 +39,17 @@ namespace BCSRecUnitTest
 			int expected = 6;
 			setLength(input, &length);
 			int actual = input;
-			Assert::AreEqual(expected, actual);
-		}
+			Assert::AreNotEqual(expected, actual);
+		} // testing function works
 		TEST_METHOD(Test_SetLength2)
 		{
 			int length = 5;
-			int input = 0;
+			int input = -7;
 			int expected = 5;
 			setLength(input, &length);
 			int actual = input;
-			Assert::AreNotEqual(expected, actual);
-		}
+			Assert::AreEqual(expected, actual);
+		} //testing negative numbers
 		TEST_METHOD(Test_SetLength3)
 		{
 			int length = 5;
@@ -57,17 +57,17 @@ namespace BCSRecUnitTest
 			int expected = 5;
 			setLength(input, &length);
 			int actual = input;
-			Assert::AreNotEqual(expected, actual);
-		}
+			Assert::AreEqual(expected, actual);
+		} // testing upper limit
 		TEST_METHOD(Test_Setwidth1)
 		{
 			int width = 5;
-			int input = 6;
-			int expected = 6;
+			int input = 0.5;
+			int expected = 5;
 			setLength(input, &width);
 			int actual = input;
 			Assert::AreEqual(expected, actual);
-		}
+		} //testing decimal numbers
 		TEST_METHOD(Test_Setwidth2)
 		{
 			int width = 5;
@@ -76,16 +76,16 @@ namespace BCSRecUnitTest
 			setLength(input, &width);
 			int actual = input;
 			Assert::AreEqual(expected, actual);
-		}
+		} //testing 0 input (lower limit)
 		TEST_METHOD(Test_Setwidth3)
 		{
 			int width = 5;
-			int input = 100;
-			int expected = 5;
+			int input = 45;
+			int expected = 45;
 			setLength(input, &width);
 			int actual = input;
 			Assert::AreEqual(expected, actual);
-		}
+		}// testing if function works
 
 
 

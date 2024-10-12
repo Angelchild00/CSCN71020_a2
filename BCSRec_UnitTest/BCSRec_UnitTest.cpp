@@ -39,7 +39,7 @@ namespace BCSRecUnitTest
 			int expected = 6;
 			setLength(input, &length);
 			int actual = input;
-			Assert::AreNotEqual(expected, actual);
+			Assert::AreEqual(expected, actual);
 		}
 		TEST_METHOD(Test_SetLength2)
 		{
